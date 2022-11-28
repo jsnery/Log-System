@@ -1,6 +1,6 @@
 from os import system
 from sys import platform
-from tools.logFile import * 
+from toolsLog.logFile import * 
 
 
 def clear():

@@ -1,4 +1,4 @@
-from tools import *
+from toolsLog import *
 
 clear()
 

@@ -17,3 +17,7 @@
 
  in the file is written: (27-11-2022 22-46-47) Fatal error
  ```
+ ### additional
+
+- clear()
+Serves to clean the console, works with MAC, Linux and Windows.

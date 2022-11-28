@@ -1,11 +1,11 @@
-# Sistema de Log
-First attempt to create a log system. Simple and practical system, for error register in log. There must be a better solution, but this was made by myself.
+# Logging System in Python
+First attempt to create a Logging System. Simple and practical system, for error register. There must be a better solution, but this was made by myself.
 
 I'm satisfied for that starter project.
 
 #### • logName()
 
-This role is responsible for two processes. First it looks for the logs folder, if it doesn't exist it creates it. Then it creates the name of the **.txt** log file, it uses the:
+This role is responsible for two processes. First it looks for the logs folder, if it doesn't exist it creates it. Then it creates the name of the **.txt** logging file, it uses the:
 ```
 >>> datetime.now().strftime("logInfo_%d-%m-%Y_%H-%M-%S")
 ```
@@ -24,4 +24,4 @@ in the file is written: (27-11-2022 22-46-47) Fatal error
 
 #### • clear()
 
-Serves to clean the console, works with MAC, Linux and Windows.
+Serves to clean the terminal, works with MAC, Linux and Windows.

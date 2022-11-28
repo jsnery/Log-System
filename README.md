@@ -9,5 +9,7 @@
  - logAppend(error)
  basically responsible for writing the content of the log accompanied by the error data inside the **.txt** file.
  ```
- logAppend(‘Fatal Error’) -> (27-11-2022 22-46-47) Fatal error
+ >>> logAppend(‘Fatal Error’)
+
+ in the file is written: (27-11-2022 22-46-47) Fatal error
  ```

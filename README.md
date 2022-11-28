@@ -6,7 +6,7 @@
  - logName()
  This role is responsible for two processes. First it looks for the logs folder, if it doesn't exist it creates it. Then it creates the name of the **.txt** log file, it uses the:
  ```
- **datetime.now().strftime(logInfo_%d-%m-%Y_%H-%M-%S)**
+ >>> datetime.now().strftime("logInfo_%d-%m-%Y_%H-%M-%S")
  ```
  After that it creates the file using the **open()** function.
 

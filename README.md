@@ -1,17 +1,12 @@
 # Sistema de Log
- Primeira tentativa de criar um sistema de log.
- 
- Sistema simples e prático, para logs simples. Deve ter solução melhor, mas essa foi a minha.
+ First attempt to create a log system. Simple and practical system, for error register in log. There must be a better solution, but this was made by myself.
 
- Estou Satisfeito para um projeto inicial.
+ I'm satisfied for that starter project.
 
  - logName()
- Essa função é responsável por dois processos. Primeiro ela procura pela pasta de logs, caso a mesma não exista ela a cria. Em seguida ela cria o nome do arquivo .txt de log , ele utiliza a função datetime.now().strftime(logInfo_%d-%m-%Y_%H-%M-%S), dessa forma forta nome, data e hora ao mesmo tempo. Após isso ele cria o arquivo utilizando a função open().
+ This role is responsible for two processes. First it looks for the logs folder, if it doesn't exist it creates it. Then it creates the name of the *.txt* log file, it uses the *datetime.now().strftime(logInfo_%d-%m-%Y_%H-%M-%S)*. After that it creates the file using the open() function.
 
  - logAppend(error)
- Basicamente responsável por escrever o conteúdo do log acompanhado de data dentro do arquivo .txt. 
+ basically responsible for writing the content of the log accompanied by the error data inside the *.txt* file.
 
-'''
-logAppend(‘Fatal Error’)
-'''
-(27-11-2022 22-46-47) Fatal error
+ *logAppend(‘Fatal Error’)* -> (27-11-2022 22-46-47) Fatal error

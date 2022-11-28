@@ -9,6 +9,7 @@
 ```
 >>> datetime.now().strftime("logInfo_%d-%m-%Y_%H-%M-%S")
 ```
+    
     After that it creates the file using the **open()** function.
 
  - **logAppend(error)**
@@ -19,7 +20,7 @@
 
 in the file is written: (27-11-2022 22-46-47) Fatal error
 ```
- ### additional
+ ### Additional
 
 - **clear( )**
 

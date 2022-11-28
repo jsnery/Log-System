@@ -14,7 +14,7 @@ After that it creates the file using the **open()** function.
 
 #### • logAppend(error)
 
-Basically responsible for writing the content of the log accompanied by the error data inside the **.txt** file.
+**This is what you will actually use**. Basically responsible for writing the log content together with the error data inside the **.txt** file.
 ```
 >>> logAppend(‘Fatal Error’)
 

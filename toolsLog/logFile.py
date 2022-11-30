@@ -1,15 +1,22 @@
 from datetime import datetime
-from os import path, mkdir
+from os import path, makedirs
 
-def logAppend(error):
+name = None
+
+def logAppend(log):
+    global name
     fullDateTime = datetime.now().strftime('%d-%m-%Y %H-%M-%S')
-    msg = f'({fullDateTime}) {error}\n'
-    log.write(msg)
+    msg = f'({fullDateTime}) Info -> {log}\n'
+    
+    if name is None:
+        name = logName()
+            
+    with open(name, 'a') as logCreate:
+        logCreate.write(msg)
 
-def logName():
-    if not path.isdir('./logs/'):
-        mkdir('./logs/')
+
+def logName(dir='./logs/'):
+    if not path.isdir(dir):
+        makedirs(dir)
     logInfoName = datetime.now().strftime('logInfo_%d-%m-%Y_%H-%M-%S')
-    return f'./logs/{logInfoName}.txt'
-
-log = open(logName(), 'a')
+    return f'{dir}{logInfoName}.txt'

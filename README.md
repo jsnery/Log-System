@@ -16,9 +16,9 @@ Basically responsible for writing the content you want to report inside the log 
 
 Obs.: The directory must always end with a slash!!
 ```
->>> logAppend(‘Fatal Error’)
+>>> logAppend(f‘Password for user [{user}] was entered wrong’)
 
-in the file is written: (27-11-2022_22-46-47) Info -> Fatal error
+result in log: (27-11-2022 22-46-47) Info -> Password for user [John Doe] was entered wrong
 ```
 
 ### Implementation

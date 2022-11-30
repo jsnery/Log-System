@@ -3,7 +3,7 @@ First attempt to create a Logging System. Simple and practical system, for error
 
 I'm satisfied for that starter project.
 
-#### • logName()
+#### • logName(dir='./logs/')
 
 This role is responsible for two processes. First it looks for the logs folder, if it doesn't exist it creates it. Then it creates the name of the **.txt** logging file, it uses the:
 ```
@@ -12,16 +12,16 @@ This role is responsible for two processes. First it looks for the logs folder, 
     
 After that it creates the file using the **open()** function.
 
-#### • logAppend(error)
+#### • logAppend(log)
 
 **This is what you will actually use**. Basically responsible for writing the log content together with the error data inside the **.txt** file.
 ```
 >>> logAppend(‘Fatal Error’)
 
-in the file is written: (27-11-2022 22-46-47) Fatal error
+in the file is written: (27-11-2022 22-46-47) Info -> Fatal error
 ```
-### Additional
+### Implementation
 
-#### • clear()
+Implementei o sistema de log em um pequeno sistema de cadastro e login para a demostração do mesmo, segue o link abaixo:
 
-Serves to clean the terminal, works with MAC, Linux and Windows.
+This site was built using [Login-Registration-System](https://github.com/jsnery/Login-Registration-System)

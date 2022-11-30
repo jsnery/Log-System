@@ -3,26 +3,21 @@ First attempt to create a Logging System. Simple and practical system, for error
 
 I'm satisfied for that starter project.
 
-### • logName(_dir='./logs/'_)
+### Creating the log messages
 
-Função interna responsavel por gerar nome e diretorio do log. Then it creates the name of the **.txt** logging file, it uses the:
-```
->>> datetime.now().strftime("logInfo_%d-%m-%Y_%H-%M-%S")
-```
-    
-After that it creates the file using the **open()** function.
+**logAppend(<log> ,extension='txt', prefix='logInfo', dir='./logs/')**. Basically responsible for writing the content you want to report inside the log file. The record is created in _.txt_ format, but can be changed to your preference.
 
-### • logAppend(_log_)
+- log: Where the log message will be written (Required)
+- extension: Responsible for defining the log file type (default _.txt_)
+- prefix: Responsible for setting the file name prefix (Default as _logInfo_)
+- dir: Responsible for defining the log directory (default as _'./logs/'_)
 
-**This is what you will actually use**. Basically responsible for writing the log content together with the error data inside the **.txt** file.
+Obs.: The directory must always end with a slash!!
 ```
 >>> logAppend(‘Fatal Error’)
 
 in the file is written: (27-11-2022_22-46-47) Info -> Fatal error
 ```
-- logName(_dir='./logs/'_)
-
-Internal function responsible for generating log name and directory. It is possible to have the directory variable customized, as well as the name of the log file.
 
 ### Implementation
 

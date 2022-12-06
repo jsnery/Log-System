@@ -3,7 +3,7 @@ First attempt to create a Logging System. Simple and practical system, for error
 
 I'm satisfied for that starter project.
 
-### Creating the log messages
+<!-- ### Creating the log messages
 ```
 logAppend(<log> ,extension='txt', prefix='logInfo', dir='./logs/')
 ```
@@ -25,4 +25,4 @@ result in log: (27-11-2022 22-46-47) Info -> Password for user [John Doe] was en
 
 I implemented the log system in a small registration and login system for its demonstration, follow the link below:
 
-Click Here [[Login-Registration-System]](https://github.com/jsnery/Login-Registration-System)
+Click Here [[Login-Registration-System]](https://github.com/jsnery/Login-Registration-System) -->

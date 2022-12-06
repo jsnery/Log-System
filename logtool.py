@@ -1,21 +1,41 @@
 from datetime import datetime
-from os import path, makedirs
+from pathlib import Path
 
-dirLog = None
+__all__ = ['LogPrint', 'LogFile']
 
-def logAppend(log,extension='txt', prefix='logInfo', dir='./logs/'):
-    global dirLog
-    fullDateTime = datetime.now().strftime('%d-%m-%Y_%H-%M-%S')
-    msg = f'({fullDateTime[:10]} {fullDateTime[11:]}) Info -> {log}\n'
+
+DATE = datetime.now().strftime('%d-%m-%Y')
+TIME = datetime.now().strftime('%H:%M:%S')
+DIR = Path(__file__).parent / 'logs'
+FILE = DIR  / f"log_{DATE}.txt"
+
+class Log:
     
-    def logName():
-        if not path.isdir(dir):
-            makedirs(dir)
-        logInfoName = f'{prefix}_{fullDateTime}'
-        return f'{dir}{logInfoName}.{extension}'
+    def _logsys(self, msg, prefix):
+        raise NotImplementedError('Log System not implemented')
     
-    if dirLog is None:
-        dirLog = logName()
+    def log_Info(self, msg, prefix='logInfo'):
+        return self._logsys(msg, prefix)
+    
+    
+class LogPrint(Log):
+    
+    def _logsys(self, msg, prefix):
+        print(f"{prefix}: {msg}")
+    
+class LogFile(Log):
+    
+    def _logsys(self, msg, prefix):
+        if not DIR.exists():
+            DIR.mkdir()
             
-    with open(dirLog, 'a') as logCreate:
-        logCreate.write(msg)
+        with FILE.open('a') as file:
+            file.write(f"({TIME}) {prefix} -> {msg}")
+
+
+
+if __name__ == "__main__":
+    l = LogFile()
+    l.log_Info('Hi\n')
+    l2 = LogPrint()
+    l2.log_Info('Hi\n')

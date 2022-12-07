@@ -1,5 +1,6 @@
 from datetime import datetime
 from pathlib import Path
+from abc import ABC, abstractmethod
 
 __all__ = ['LogPrint', 'LogFile']
 
@@ -9,14 +10,13 @@ TIME = datetime.now().strftime('%H:%M:%S')
 DIR = Path(__file__).parent / 'logs'
 FILE = DIR  / f"log_{DATE}.txt"
 
-class Log:
+class Log(ABC):
     
-    def _logsys(self, msg, prefix):
-        raise NotImplementedError('Log System not implemented')
+    @abstractmethod
+    def _logsys(self, msg, prefix):...
     
     def log_Info(self, msg, prefix='logInfo'):
         return self._logsys(msg, prefix)
-    
     
 class LogPrint(Log):
     
